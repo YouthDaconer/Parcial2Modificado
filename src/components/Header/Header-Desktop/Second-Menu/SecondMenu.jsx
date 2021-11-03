@@ -1,14 +1,14 @@
 import React from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBell, faCommentDots, faUserCircle, faChevronDown } from '@fortawesome/free-solid-svg-icons';
+import ItemSecondMenu from './Item-Second-Menu/ItemSecondMenu';
 
 const SecondMenu = () => {
     return (
         <div style={styles.secondIcons}>
-            <FontAwesomeIcon icon={faBell} style={styles.icon2} />
-            <FontAwesomeIcon icon={faCommentDots} style={styles.icon2} />
-            <FontAwesomeIcon icon={faUserCircle} style={styles.icon2} />
-            <FontAwesomeIcon icon={faChevronDown} style={styles.icon2} />
+            <ItemSecondMenu style={styles.icon2} icon={faBell} />
+            <ItemSecondMenu style={styles.icon2} icon={faCommentDots} />
+            <ItemSecondMenu style={styles.icon2} icon={faUserCircle} />
+            <ItemSecondMenu style={styles.icon2} icon={faChevronDown} />
         </div>
     );
 };
@@ -25,7 +25,9 @@ const styles = {
     icon2: {
         cursor: 'pointer',
         color: 'rgba(0, 0, 0, 0.5)',
-        fontSize: '30px'
+        fontSize: '25px',
+        padding: '9px',
+        borderRadius: '50px'
     },
 }
 

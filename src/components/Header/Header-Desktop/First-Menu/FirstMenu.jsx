@@ -1,16 +1,13 @@
 import React from 'react';
 import logoPinterest from './../../../../assets/logopinterest.png';
+import ItemFirstMenu from './Item-First-Menu/ItemFirstMenu';
 
 const FirstMenu = () => {
     return (
         <div style={styles.firstIcons}>
             <img src={logoPinterest} alt="logoP" style={styles.logoP} />
-            <div style={styles.inicio} >
-                <span><strong>Inicio</strong></span>
-            </div>
-            <div style={styles.hoy} >
-                <span><strong>Hoy</strong></span>
-            </div>
+            <ItemFirstMenu title="Inicio" style={styles.icon} selected={true} />
+            <ItemFirstMenu title="Hoy" style={styles.icon} selected={false} />
         </div>
     );
 };
@@ -29,18 +26,7 @@ const styles = {
         width: '30px',
         height: '30px',
     },
-    inicio: {
-        cursor: 'pointer',
-        width: '70px',
-        height: '50px',
-        borderRadius: '50px',
-        backgroundColor: 'black',
-        color: 'white',
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-    },
-    hoy: {
+    icon: {
         cursor: 'pointer',
         width: '70px',
         height: '50px',
